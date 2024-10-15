@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form id="weatherForm">
+            <input type="text" id="cityInput" placeholder="Enter city name" required>
+            <button type="submit">Get Weather</button>
+            <button type="button" id="clearData">Clear Data</button>
+        </form>
+        <div id="options">
+            <button id="sortByTemp">Sort by Temperature</button>
+            <button id="sortByHumidity">Sort by Humidity</button>
+        </div>
+        <table id="weatherTable">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Condition</th>
+                    <th>Temp (°C)</th>
+                    <th>Humidity (%)</th>
+                    <th>Wind (kph)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Weather data will be inserted here -->
+            </tbody>
+        </table>
+        <div id="errorMessage"></div>
+        <footer>
+            Developed by Md. Abdul Kayum for Loosely Coupled
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
