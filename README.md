@@ -1,5 +1,6 @@
 # WeatherApp
 For live view: https://weather-app-kayum.netlify.app/
+
 Features of Weather App-
 1. In this webapp I used API from: https://www.weatherapi.com/
 2. Used HTML, CSS, and JavaScript to build the web application.
