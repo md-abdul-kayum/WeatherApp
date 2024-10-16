@@ -10,7 +10,7 @@ document.getElementById('sortByTemp').addEventListener('click', () => sortTable(
 document.getElementById('sortByHumidity').addEventListener('click', () => sortTable('humidity'));
 
 async function fetchWeather(city) {
-    const apiKey = '63165e282fe747c9abb175555241510'; // Replace with your WeatherAPI key
+    const apiKey = '63165e282fe747c9abb175555241510'; 
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7`;
 
     try {
@@ -27,8 +27,7 @@ async function fetchWeather(city) {
 
 function displayWeather(data) {
     const weatherTable = document.getElementById('weatherTable').getElementsByTagName('tbody')[0];
-    weatherTable.innerHTML = ''; // Clear previous data
-
+    weatherTable.innerHTML = '';
     const { forecast } = data;
     forecast.forecastday.forEach(day => {
         const dateObj = new Date(day.date);
@@ -46,9 +45,9 @@ function displayWeather(data) {
 
 function formatDate(date) {
     const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-indexed
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
     const year = date.getFullYear();
-    return `${day}-${month}-${year}`; // Format as dd-mm-yyyy
+    return `${day}-${month}-${year}`; 
 }
 
 function displayError(error) {
@@ -58,9 +57,9 @@ function displayError(error) {
 
 function clearData() {
     const weatherTable = document.getElementById('weatherTable').getElementsByTagName('tbody')[0];
-    weatherTable.innerHTML = ''; // Clear all data
+    weatherTable.innerHTML = '';
     const errorMessage = document.getElementById('errorMessage');
-    errorMessage.textContent = ''; // Clear error messages
+    errorMessage.textContent = ''; 
 }
 
 function sortTable(type) {
@@ -76,7 +75,6 @@ function sortTable(type) {
 
     rows.sort(compareFunction);
 
-    // Rebuild the table body with sorted rows
     table.innerHTML = '';
     rows.forEach(row => table.appendChild(row));
 }
